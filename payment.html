@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แจ้งชำระเงิน - AI Empower</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>แจ้งการชำระเงิน</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="schedule.html">กำหนดการ</a>
+    <a href="registration.html">ลงทะเบียน</a>
+    <a href="payment.html" class="active">แจ้งชำระเงิน</a>
+    <a href="contact.html">ติดต่อ</a>
+  </nav>
+
+  <main>
+    <form>
+      <label>ยอดเงินที่โอน (บาท): </label><br>
+      <input type="number" id="amount"><br><br>
+
+      <label>วัน/เวลาที่โอน: </label><br>
+      <input type="datetime-local"><br><br>
+
+      <label>แนบสลิปการโอน: </label><br>
+      <input type="file"><br><br>
+
+      <button type="button" id="btnPay" onclick="checkPayment()">ยืนยันการแจ้งชำระเงิน</button>
+    </form>
+  </main>
+
+  <script>
+    function checkPayment() {
+      const amount = document.getElementById('amount').value;
+      const btn = document.getElementById('btnPay');
+      if (amount) {
+        alert("แจ้งชำระเงินสำเร็จ! เจ้าหน้าที่จะตรวจสอบภายใน 24 ชม.");
+        btn.textContent = "แจ้งชำระแล้ว";
+        btn.disabled = true;
+      } else {
+        alert("กรุณาระบุยอดเงินที่โอน");
+      }
+    }
+  </script>
+
+  <footer>
+    จัดทำโดย นาย นิติพงษ์ คำหวาน
+  </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ติดต่อ - AI Empower</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ติดต่อสอบถาม</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="schedule.html">กำหนดการ</a>
+    <a href="registration.html">ลงทะเบียน</a>
+    <a href="payment.html">แจ้งชำระเงิน</a>
+    <a href="contact.html" class="active">ติดต่อ</a>
+  </nav>
+
+  <main>
+    <h3>ข้อมูลติดต่อ</h3>
+    <p><b>ผู้ประสานงาน:</b> สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</p>
+    <p><b>โทร:</b> 02-942-5800</p>
+    <p><b>อีเมล:</b> info@chandra.ac.th</p>
+    <p id="current-time"></p>
+  </main>
+
+  <script>
+    document.getElementById("current-time").innerHTML =
+      "เวลาปัจจุบัน: " + new Date().toLocaleString();
+  </script>
+
+  <footer>
+    จัดทำโดย นาย นิติพงษ์ คำหวาน
+  </footer>
+</body>
+</html>
